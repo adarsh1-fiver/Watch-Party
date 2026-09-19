@@ -25,8 +25,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: CLIENT_URL,
+    origin: "https://watch-party-tau.vercel.app",
     credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
